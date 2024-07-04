@@ -1,0 +1,54 @@
+{% load static %}
+
+<header>
+    <div class="uk-section uk-padding-remove-vertical">        
+        <nav class="uk-navbar-container uk-navbar-transparent" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+            <div class="uk-container" data-uk-navbar>
+                <div class="uk-navbar-left">
+                    <div class="uk-navbar-item">
+                        <a class="uk-logo" href="#">
+                            
+                            <img src="{% static 'assets/images/logo/logo.png' %}" data-src="{% static 'assets/images/logo/logo.png' %}" alt="logo" width="146" height="40" data-uk-img>
+                        </a>
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="{% url 'frontui' %}">Home</a>
+                                
+                            </li>
+                            
+                            <li><a href="{% url 'frontui-company' %}">Company</a> 
+                                
+                            </li>
+                            <li><a href="{% url 'frontui-package' %}">Package</a> 
+                            </li>
+                            <li><a href="#">Resources</a>
+                               
+                            </li>
+
+                            
+                            <li>
+                                <a  href="https://wa.me/+15164930819" class="whatsapp-button" target="_blank">Support</a>
+                               
+                            </li>
+                            <li>
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="uk-navbar-right">
+
+                    <div class="uk-navbar-item uk-visible@m in-optional-nav">
+                        <a href="{% url 'sign-up' %}" class="uk-button uk-button-primary">Sign up<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                    </div>
+                    <div class="uk-navbar-item uk-visible@m in-optional-nav">
+                        <a href="{% url 'sign-in' %}" class="uk-button uk-button-primary">Log in<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                    </div>
+                    {% comment %} <div class="uk-navbar-item uk-visible@m in-optional-nav">
+                        <a href="https://wa.me/+14107258662" class="uk-button whatsapp-button" target="_blank">Chat on WhatsAp</a>
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </nav>
+    </div>  
+</header>
