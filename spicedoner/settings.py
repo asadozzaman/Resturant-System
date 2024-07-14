@@ -117,6 +117,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# STATIC_URL = 'static/'
+
+# STATICFILES_DIRS = [BASE_DIR / 'static/']
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# # STATIC_ROOT = '/usr/local/lsws/Example/html/demo/public/static'
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'static/']
@@ -126,8 +140,32 @@ STATIC_ROOT = '/usr/local/lsws/Example/html/demo/public/static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+  
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/path/to/django/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+
+
+
+
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
